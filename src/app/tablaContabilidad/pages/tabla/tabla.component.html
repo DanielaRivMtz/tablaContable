@@ -1,0 +1,115 @@
+<!-- component -->
+<link rel="stylesheet" href="https://demos.creative-tim.com/notus-js/assets/styles/tailwind.css">
+<link rel="stylesheet"
+    href="https://demos.creative-tim.com/notus-js/assets/vendor/@fortawesome/fontawesome-free/css/all.min.css">
+
+
+<section class="py-1 bg-blueGray-50">
+    <div class="w-full xl:w-8/12 mb-12 xl:mb-0 px-4 mx-auto mt-14">
+        <div class="relative flex flex-col min-w-0 break-words bg-white w-full mb-6 shadow-lg rounded ">
+
+            <div class="block w-full overflow-x-auto">
+                <table class="items-center bg-transparent w-full border-collapse ">
+                    <thead>
+                        <tr>
+                            <th
+                                class="px-6 bg-blueGray-200 text-blueGray-500 align-middle border border-solid border-blueGray-100 py-3 text-xs uppercase border-l-0 border-r-0 whitespace-nowrap font-semibold text-center">
+                            </th>
+                            <th
+                                class="px-6 bg-blueGray-200 text-blueGray-500 align-middle border border-solid border-blueGray-100 py-3 text-xs uppercase border-l-0 border-r-0 whitespace-nowrap font-semibold text-center">
+                                Cargo
+                            </th>
+                            <th
+                                class="px-6 bg-blueGray-200 text-blueGray-500 align-middle border border-solid border-blueGray-100 py-3 text-xs uppercase border-l-0 border-r-0 whitespace-nowrap font-semibold text-center">
+                                Abono
+                            </th>
+                        </tr>
+                    </thead>
+
+                    <tbody class="text-center">
+                        <tr>
+                            <th
+                                class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-sm whitespace-nowrap p-4 text-left text-blueGray-700 ">
+                                Bancos
+                            </th>
+                            <td
+                                class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-sm whitespace-nowrap p-4">
+                                <input class="border-none text-center text-sm" type="text" [(ngModel)]="charges[0]" currencyMask (ngModelChange)="selectAmountType('charges',0)" [disabled]="amountsType[0]=='payments'">
+                            </td>
+                            <td
+                                class="border-t-0 px-6 align-center border-l-0 border-r-0 text-sm whitespace-nowrap p-4">
+                                <input class="border-none text-center text-sm" type="text" [(ngModel)]="payments[0]" currencyMask (ngModelChange)="selectAmountType('payments',0)" [disabled]="amountsType[0]=='charges'">
+                            </td>
+                        </tr>
+                        <tr>
+                            <th
+                                class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-sm whitespace-nowrap p-4 text-left text-blueGray-700">
+                                Pago proveedor Inmobiliaria S.A. 
+                            </th>
+                            <td
+                                class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4">
+                                <input class="border-none text-center text-sm" type="text" [(ngModel)]="charges[1]" currencyMask (ngModelChange)="selectAmountType('charges',1)" [disabled]="amountsType[1]=='payments'">
+                            </td>
+                            <td
+                                class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4">
+                                <input class="border-none text-center text-sm" type="text" [(ngModel)]="payments[1]" currencyMask (ngModelChange)="selectAmountType('payments',1)" [disabled]="amountsType[1]=='charges'">
+                            </td>
+                        </tr>
+                        <tr>
+                            <th
+                                class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-sm whitespace-nowrap p-4 text-left text-blueGray-700">
+                                Cobro cheque por máquina envasadora
+                            </th>
+                            <td
+                                class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4">
+                                <input class="border-none text-center text-sm" type="text" [(ngModel)]="charges[2]" currencyMask (ngModelChange)="selectAmountType('charges',2)" [disabled]="amountsType[2]=='payments'">
+                            </td>
+                            <td
+                                class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4">
+                                <input class="border-none text-center text-sm" type="text" [(ngModel)]="payments[2]" currencyMask (ngModelChange)="selectAmountType('payments',2)" [disabled]="amountsType[2]=='charges'">
+                            </td>
+                        </tr>
+                        <tr>
+                            <th
+                                class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-sm whitespace-nowrap p-4 text-left text-blueGray-700">
+                                Pago de Zaza S.A.
+                            </th>
+                            <td
+                                class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4">
+                                <input class="border-none text-center text-sm" type="text" [(ngModel)]="charges[3]" currencyMask (ngModelChange)="selectAmountType('charges',3)" [disabled]="amountsType[3]=='payments'">
+                            </td>
+                            <td
+                                class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4">
+                                <input class="border-none text-center text-sm" type="text" [(ngModel)]="payments[3]" currencyMask (ngModelChange)="selectAmountType('payments',3)" [disabled]="amountsType[3]=='charges'">
+                            </td>
+                        </tr>
+                        <tr>
+                            <th
+                                class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-sm whitespace-nowrap p-4 text-left text-blueGray-700">
+                                Viáticos a Monterrey
+                            </th>
+                            <td
+                                class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4">
+                                <input class="border-none text-center text-sm" type="text" [(ngModel)]="charges[4]" currencyMask (ngModelChange)="selectAmountType('charges',4)" [disabled]="amountsType[4]=='payments'">
+                            </td>
+                            <td
+                                class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4">
+                                <input class="border-none text-center text-sm" type="text" [(ngModel)]="payments[4]" currencyMask (ngModelChange)="selectAmountType('payments',4)" [disabled]="amountsType[4]=='charges'">
+                            </td>
+                        </tr>
+                        <tr>
+                            <th class="px-6 bg-blueGray-200 text-blueGray-500 align-middle border border-solid border-blueGray-100 py-3 text-xs uppercase border-l-0 border-r-0 whitespace-nowrap font-semibold text-right">Totales</th>
+                            <td class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-sm whitespace-nowrap p-4 text-right">$ {{totalCharges}}</td>
+                            <td class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-sm whitespace-nowrap p-4 text-right">$ {{totalPayments}}</td>
+                        </tr>
+                        <tr>
+                            <th class="px-6 bg-blueGray-200 text-blueGray-500 align-middle border border-solid border-blueGray-100 py-3 text-xs uppercase border-l-0 border-r-0 whitespace-nowrap font-semibold text-right">Saldo Total</th>
+                            <td class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-sm whitespace-nowrap p-4 text-right">$ {{totalBalance}}</td>
+                        </tr>
+                    </tbody>
+
+                </table>
+            </div>
+        </div>
+    </div>
+</section>
